@@ -4,7 +4,7 @@
 #include <fstream>
 #include <cstring>
 using namespace std;
-
+int sum = 0;
 void main()
 {
 	setlocale(LC_ALL, "Rus");
@@ -33,11 +33,11 @@ void main()
 		while (!in_file.eof())
 		{
 			in_file.get(c);
-			if (in_file.eof()) return;
+			if (in_file.eof()) break;
 			else s++;
-			cout << s << " " << c << endl;
 		}
-		cout << s << endl;		
+		cout << "Количество символов в текстовом файле = " << s << endl;
+
 	}
 	else if (n == 3)
 	{
