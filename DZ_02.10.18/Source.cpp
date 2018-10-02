@@ -33,9 +33,11 @@ void main()
 		while (!in_file.eof())
 		{
 			in_file.get(c);
-			s++;
+			if (in_file.eof()) return;
+			else s++;
+			cout << s << " " << c << endl;
 		}
-		cout << s << endl;
+		cout << s << endl;		
 	}
 	else if (n == 3)
 	{
@@ -117,10 +119,10 @@ void main()
 				else if (c == '1')
 					c = '0';
 				cout << c;
-			}			
+			}
 		}
-		cout << endl;		
+		cout << endl;
 	}
-	
+
 	system("pause");
 }
